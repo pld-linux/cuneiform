@@ -6,6 +6,7 @@ License:	BSD
 Group:		Applications/Graphics
 Source0:	http://launchpad.net/cuneiform-linux/1.1/1.1/+download/%{name}-linux-%{version}.tar.bz2
 # Source0-md5:	09fd160cdfc512f26442a7e91246598d
+Patch0:		%{name}-libm.patch
 URL:		https://launchpad.net/cuneiform-linux
 BuildRequires:	ImageMagick-c++-devel
 BuildRequires:	cmake
@@ -18,6 +19,7 @@ Cognitive technologies.
 
 %prep
 %setup -q -n %{name}-linux-%{version}
+%patch0 -p1
 
 %build
 rm -f builddir/CMakeCache.txt
