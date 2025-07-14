@@ -19,7 +19,7 @@ Cognitive technologies.
 
 %prep
 %setup -q -n %{name}-linux-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 rm -f builddir/CMakeCache.txt
